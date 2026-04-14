@@ -1,0 +1,16 @@
+<mat-drawer-container>
+  <mat-drawer [opened]="opened" mode="side">
+    <mat-list>
+      <mat-list-item routerLink="/cars" routerLinkActive="active">
+        <mat-icon color="bg-primary" mat-list-icon>directions_car</mat-icon>
+       <a href="">car</a>
+      </mat-list-item>
+    </mat-list>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

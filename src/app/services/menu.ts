@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 export class Menu {
 
   public isOpen = new BehaviorSubject<boolean>(false);
-  public opened = false;
+  public opened = true;
 
   public toggle() {
     this.opened = !this.opened;
