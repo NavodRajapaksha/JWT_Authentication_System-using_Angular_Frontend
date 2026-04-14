@@ -1,4 +1,4 @@
-<mat-toolbar color="bg-primary" role="heading">
+<!-- <mat-toolbar color="bg-primary" role="heading">
   <mat-toolbar-row>
     <mat-icon style="cursor: pointer; color: aliceblue;" (click)="toggleMenu()">menu</mat-icon>
     <span class="example-spacer"></span>
@@ -6,4 +6,25 @@
     <span class="example-spacer"></span>
     <mat-icon style="cursor: pointer; color: rgb(225, 65, 29);" >logout</mat-icon>
   </mat-toolbar-row>
-</mat-toolbar>
+</mat-toolbar> -->
+
+
+<header class="d-flex align-items-center justify-content-between py-3 px-3 mb-4 border-bottom">
+
+  <div class="d-flex align-items-center gap-2">
+    <mat-icon style="cursor: pointer; color: aliceblue;" (click)="toggleMenu()">menu</mat-icon>
+    <span class="fw-bold">My App</span>
+  </div>
+
+  <ul class="nav justify-content-center">
+    <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+    <li><a href="#" class="nav-link px-2">Admin Dashboard</a></li>
+    <li><a href="#" class="nav-link px-2">User Dashboard</a></li>
+  </ul>
+
+  <div>
+    <button type="button" class="btn btn-outline-primary me-2">Login</button>
+    <button type="button" class="btn btn-primary">Sign-up</button>
+  </div>
+
+</header>
