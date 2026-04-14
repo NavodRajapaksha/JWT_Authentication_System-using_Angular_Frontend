@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modern Login</title>
+
+</head>
+
+<body class="d-flex justify-content-center align-items-center">
+
+  <div class="card login-card col-md-4">
+    
+    <h3 class="text-center mb-4">Login</h3>
+
+    <form>
+      
+      <!-- Email -->
+      <div class="mb-3 input-group">
+        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+        <input 
+            type="email" 
+            ngModel
+            class="form-control" 
+            id="username"
+            placeholder="Email" 
+            required>
+      </div>
+
+      <!-- Password -->
+      <div class="mb-3 input-group">
+        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+        <input 
+            type="password" 
+            ngModel
+            class="form-control" 
+            id="userPassword"
+            placeholder="Password" 
+            required>
+      </div>
+
+      <!-- Remember -->
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="remember">
+        <label class="form-check-label" for="remember">Remember me</label>
+      </div>
+
+      <!-- Button -->
+      <button type="submit" class="btn btn-custom w-100">Login</button>
+
+      <!-- Links -->
+      <div class="text-center mt-3">
+        <a href="#">Forgot Password?</a>
+      </div>
+
+    </form>
+
+  </div>
+
+</body>
+</html>

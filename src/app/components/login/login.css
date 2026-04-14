@@ -1,0 +1,25 @@
+body {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      height: 100vh;
+    }
+
+    .login-card {
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .form-control {
+      border-radius: 10px;
+    }
+
+    .btn-custom {
+      border-radius: 10px;
+      background: #667eea;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .btn-custom:hover {
+      background: #5a67d8;
+    }
