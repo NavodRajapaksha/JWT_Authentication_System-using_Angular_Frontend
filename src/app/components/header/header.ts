@@ -5,8 +5,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { Menu } from '../../services/menu';
 import { RouterLink } from "@angular/router";
 import { UserAuth } from '../../services/user-auth';
-import { NgIf } from "../../../../node_modules/@angular/common/types/_common_module-chunk";
+import { NgIf } from '@angular/common';
 import { Router } from '@angular/router';
+import { User } from '../../services/user';
 
 
 @Component({
@@ -26,7 +27,8 @@ export class Header {
   constructor(
     private menu: Menu,
     private userAuth: UserAuth,
-    private router: Router
+    private router: Router,
+    public user: User
   ) {
   }
 
