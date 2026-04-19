@@ -3,6 +3,7 @@ import { Login } from './components/login/login';
 import { Home } from './components/home/home';
 import { Admin } from './components/admin/admin';
 import { User } from './components/user/user';
+import { authGuard } from './components/auth/auth-guard';
 
 export const routes: Routes = [
     {
@@ -15,10 +16,14 @@ export const routes: Routes = [
     },
     {
         path: 'admin',
-        component: Admin
+        component: Admin,
+        canActivate: [authGuard],
+        data: { roles: ['ADMIN'] }
     },
     {
         path: 'user',
-        component: User
+        component: User,
+        canActivate: [authGuard],
+        data: { roles: ['USER', 'ADMIN'] }
     }
 ];

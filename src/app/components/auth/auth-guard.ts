@@ -1,17 +1,28 @@
-import { Inject, Injectable } from '@angular/core';
-import { CanActivateFn } from '@angular/router';
+import { inject } from '@angular/core';
+import { CanActivateFn, Router } from '@angular/router';
 import { UserAuth } from '../../services/user-auth';
-
-@Injectable({
-  providedIn: 'root'
-})
+import { User } from '../../services/user';
 
 export const authGuard: CanActivateFn = (route, state) => {
 
-  constructor(
-    private userauth : UserAuth
-  ){}
+  const userAuth = inject(UserAuth);
+  const router = inject(Router);
+  const user = inject(User);
 
+  if(userAuth.getToken() !== null) {
+    const role = route.data['roles'] as Array<string>;
+    if(role) {
+      const match = user.roleEqual(role);
+      if(match) {
+        return true;
+      } else {
+        router.navigate(['/forbidden']);
+        return false;
+      }
+    }
+  }
 
-  return true;
+  router.navigate(['/login']);
+  return false;
+
 };
