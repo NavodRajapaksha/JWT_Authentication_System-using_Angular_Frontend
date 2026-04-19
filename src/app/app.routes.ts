@@ -4,6 +4,7 @@ import { Home } from './components/home/home';
 import { Admin } from './components/admin/admin';
 import { User } from './components/user/user';
 import { authGuard } from './components/auth/auth-guard';
+import { Forbidden } from './components/forbidden/forbidden';
 
 export const routes: Routes = [
     {
@@ -18,12 +19,20 @@ export const routes: Routes = [
         path: 'admin',
         component: Admin,
         canActivate: [authGuard],
-        data: { roles: ['ADMIN'] }
+        data: { roles: ['Admin'] }
     },
     {
         path: 'user',
         component: User,
         canActivate: [authGuard],
-        data: { roles: ['USER', 'ADMIN'] }
-    }
+        data: { roles: ['User', 'Admin'] }
+    },
+    {
+        path: 'forbidden',
+        component: Forbidden
+    },
+    { 
+        path: '**', 
+        redirectTo: '/home' 
+    } 
 ];
