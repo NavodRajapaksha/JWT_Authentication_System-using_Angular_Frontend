@@ -1,11 +1,11 @@
 body {
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      height: 100vh;
+      /* background: linear-gradient(135deg, #667eea, #764ba2); */
+      height: 80vh;
     }
 
     .login-card {
       border-radius: 20px;
-      padding: 30px;
+      padding: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     }
 
