@@ -4,6 +4,7 @@ import { OnInit } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 import { User } from '../../services/user';
 import { Router } from '@angular/router'; 
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-signup',
@@ -22,7 +23,8 @@ export class SignupComponent implements OnInit {
 
   constructor(
     private userService: User,
-    private router: Router
+    private router: Router,
+    private toastr: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -31,13 +33,11 @@ export class SignupComponent implements OnInit {
   register() {
     this.userService.registerNewUser(this.signupData).subscribe(
       (response) => {
-        console.log('User registered successfully:', response);
-        alert('User registered successfully!');
+        this.toastr.success('User registered successfully!', 'Success');
         this.router.navigate(['/login']);
       },
       (error) => {
-        console.error('Error registering user:', error);
-        alert('Error registering user. Please try again.');
+        this.toastr.error('Registration failed. Please try again.', 'Error');
         this.router.navigate(['/home']);
       }
     )

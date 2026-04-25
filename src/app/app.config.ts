@@ -5,6 +5,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { AuthInterceptor } from './components/auth/auth.interceptor'; 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { withInterceptorsFromDi } from '@angular/common/http';  
+import { provideToastr } from 'ngx-toastr';
 
 import { routes } from './app.routes';
 
@@ -12,6 +13,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
   provideBrowserGlobalErrorListeners(),
   provideRouter(routes),
+  provideToastr(),
   provideAnimations(),
   provideHttpClient(
     withInterceptorsFromDi()
@@ -20,6 +22,11 @@ export const appConfig: ApplicationConfig = {
     provide: HTTP_INTERCEPTORS,
     useClass: AuthInterceptor,
     multi: true
-  }
+  },
+  provideToastr({
+    positionClass: 'toast-center-center',
+    timeOut: 3000,
+    closeButton: true
+  })
 ]
 };
