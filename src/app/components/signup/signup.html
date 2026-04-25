@@ -7,19 +7,19 @@
         Already signed up? <a href="#" class="text-decoration-none fw-semibold" style="color: #0d47a1;">Log in</a>
       </p>
 
-      <form>
+      <form (ngSubmit)="register()">
         <div class="mb-3">
-          <input type="email" class="form-control form-control-lg" placeholder="Your Email Address" style="font-size: 0.95rem;">
+          <input type="email" name="email" [(ngModel)]="signupData.username" class="form-control form-control-lg" placeholder="Your Email Address" style="font-size: 0.95rem;">
         </div>
         <div class="mb-3">
-          <input type="password" class="form-control form-control-lg" placeholder="Create A Password" style="font-size: 0.95rem;">
+          <input type="password" name="password" [(ngModel)]="signupData.userPassword" class="form-control form-control-lg" placeholder="Create A Password" style="font-size: 0.95rem;">
         </div>
         <div class="row mb-4">
           <div class="col-6 pe-2">
-            <input type="text" class="form-control form-control-lg" placeholder="First Name" style="font-size: 0.95rem;">
+            <input type="text" name="firstName" [(ngModel)]="signupData.userFirstName" class="form-control form-control-lg" placeholder="First Name" style="font-size: 0.95rem;">
           </div>
           <div class="col-6 ps-2">
-            <input type="text" class="form-control form-control-lg" placeholder="Last Name" style="font-size: 0.95rem;">
+            <input type="text" name="lastName" [(ngModel)]="signupData.userLastName" class="form-control form-control-lg" placeholder="Last Name" style="font-size: 0.95rem;">
           </div>
         </div>
 

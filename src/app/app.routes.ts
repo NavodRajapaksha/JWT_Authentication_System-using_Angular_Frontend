@@ -5,7 +5,7 @@ import { Admin } from './components/admin/admin';
 import { User } from './components/user/user';
 import { authGuard } from './components/auth/auth-guard';
 import { Forbidden } from './components/forbidden/forbidden';
-import { Signup } from './components/signup/signup';
+import { SignupComponent } from './components/signup/signup';
 
 export const routes: Routes = [
     {
@@ -34,6 +34,6 @@ export const routes: Routes = [
     },
     {
         path: 'signup',
-        component: Signup
+        component: SignupComponent
     }
 ];
