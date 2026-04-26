@@ -5,10 +5,12 @@ import { FormsModule } from "@angular/forms";
 import { User } from '../../services/user';
 import { Router } from '@angular/router'; 
 import { ToastrService } from 'ngx-toastr';
+import { NgForm } from '@angular/forms';
+import { NgClass, NgIf } from "@angular/common";
 
 @Component({
   selector: 'app-signup',
-  imports: [FormsModule],
+  imports: [FormsModule, NgClass, NgIf, ],
   templateUrl: './signup.html',
   styleUrl: './signup.css',
 })
