@@ -4,11 +4,13 @@ import { OnInit } from '@angular/core';
 import { User } from '../../services/user';
 import { UserAuth } from '../../services/user-auth';
 import { Router } from '@angular/router';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-login',
   imports: [
     FormsModule,
+    NgClass
   ],
   templateUrl: './login.html',
   styleUrl: './login.css',
@@ -25,9 +27,7 @@ export class Login implements OnInit {
   }
 
   login( loginForm: NgForm) {
-    // console.log(loginForm.value);
-    // console.log("Login successful");
-
+    
     this.userService.login(loginForm.value).subscribe(
       (response: any) => {
 
@@ -45,6 +45,12 @@ export class Login implements OnInit {
         console.error("Login failed", error);
       }
     );
+  }
+
+  showPassword: boolean = false;
+
+  togglePwd() {
+    this.showPassword = !this.showPassword;
   }
 
 }
