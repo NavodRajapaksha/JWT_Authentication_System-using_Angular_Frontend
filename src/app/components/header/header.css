@@ -1,13 +1,126 @@
-@import '@angular/material/prebuilt-themes/azure-blue.css';
+/* header.css */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap');
 
-.example-spacer {
-  flex: 1 1 auto;
+:host {
+  display: block;
 }
 
-header {
-  background-color: #4FD4DB;
+/* ── Header Bar ── */
+.app-header {
+  height: 60px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  font-family: 'DM Sans', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+  /* Purple/blue gradient left border accent like screenshot */
+  border-left: 3px solid transparent;
+  /* border-image: linear-gradient(to bottom, #6366f1, #2563eb) 1; */
 }
 
-.text-start {
-  text-align: start;
+/* ── Brand ── */
+.brand-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0d0d0d;
+  letter-spacing: -0.3px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── Menu Icon ── */
+.menu-icon {
+  color: #6b7280 !important;
+  cursor: pointer;
+  font-size: 22px !important;
+  transition: color 0.15s;
+}
+
+.menu-icon:hover {
+  color: #2563eb !important;
+}
+
+/* ── Nav Links ── */
+.nav-links {
+  gap: 4px;
+}
+
+.nav-link-item {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4b5563;
+  text-decoration: none;
+  border-radius: 7px;
+  transition: background 0.15s ease, color 0.15s ease;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: -0.1px;
+}
+
+.nav-link-item:hover {
+  background: #f3f4f6;
+  color: #0d0d0d;
+}
+
+.nav-link-item.nav-active {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* ── Buttons ── */
+.btn-login {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #374151;
+  background: transparent;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 8px;
+  transition: background 0.15s, color 0.15s;
+  letter-spacing: -0.1px;
+}
+
+.btn-login:hover {
+  background: #f3f4f6;
+  color: #0d0d0d;
+}
+
+.btn-signup {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #2563eb;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: background 0.18s, transform 0.18s, box-shadow 0.18s;
+  letter-spacing: -0.1px;
+}
+
+.btn-signup:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+}
+
+.btn-logout {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #ef4444;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: background 0.18s, transform 0.18s;
+}
+
+.btn-logout:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
 }

@@ -1,24 +1,57 @@
 
 
-<header class="d-flex align-items-center justify-content-between py-3 px-3">
+<!-- header.html -->
+<header class="app-header d-flex align-items-center justify-content-between px-4">
 
+  <!-- Brand -->
   <div class="d-flex align-items-center gap-2">
-    <mat-icon style="cursor: pointer; color: aliceblue;" (click)="toggleMenu()">menu</mat-icon>
-    <span class="fw-bold">My App</span>
+    <mat-icon class="menu-icon" (click)="toggleMenu()">menu</mat-icon>
+    <span class="brand-name">EditorialSaaS</span>
   </div>
 
-  <ul class="nav justify-content-center">
-    <li><a href="#" class="nav-link px-2 link-secondary" routerLink="/home">Home</a></li>
-    <li><a href="#" class="nav-link px-2" routerLink="/admin"
-      *ngIf="user.roleEqual(['Admin'])">Admin Dashboard</a></li>
-    <li><a href="#" class="nav-link px-2" routerLink="/user"
-      *ngIf="user.roleEqual(['User'])">User Dashboard</a></li>
+  <!-- Center Nav -->
+  <ul class="nav-links d-flex align-items-center gap-1 list-unstyled mb-0">
+    <li>
+      <a class="nav-link-item" routerLink="/home" routerLinkActive="nav-active">Solutions</a>
+    </li>
+    <li>
+      <a class="nav-link-item" routerLink="/pricing" routerLinkActive="nav-active">Pricing</a>
+    </li>
+    <li>
+      <a class="nav-link-item" routerLink="/admin"
+        routerLinkActive="nav-active"
+        *ngIf="user.roleEqual(['Admin'])">Enterprise</a>
+      <a class="nav-link-item" routerLink="/admin"
+        routerLinkActive="nav-active"
+        *ngIf="!user.roleEqual(['Admin'])">Enterprise</a>
+    </li>
+    <li>
+      <a class="nav-link-item" routerLink="/docs" routerLinkActive="nav-active">Docs</a>
+    </li>
   </ul>
 
-  <div>
-    <button *ngIf="!isLoggedIn()" type="button" class="btn btn-success  me-2" routerLink="/login">Login</button>
-    <button *ngIf="!isLoggedIn()" type="button" class="btn btn-danger  me-2" routerLink="/signup">SignUp</button>
-    <button *ngIf="isLoggedIn()" type="button" class="btn btn-danger" (click)="logout()">Logout</button>
+  <!-- Right Actions -->
+  <div class="d-flex align-items-center gap-2">
+    <button
+      *ngIf="!isLoggedIn()"
+      class="btn btn-login"
+      routerLink="/login">
+      Login
+    </button>
+
+    <button
+      *ngIf="!isLoggedIn()"
+      class="btn btn-signup"
+      routerLink="/signup">
+      Sign Up
+    </button>
+    
+    <button
+      *ngIf="isLoggedIn()"
+      class="btn btn-logout"
+      (click)="logout()">
+      Logout
+    </button>
   </div>
 
 </header>
