@@ -1,12 +1,17 @@
 
 
 
-<div class="login-card">
+
+
+<body>
+
+
+  <div class="login-card">
 
     <h2 class="login-title text-center">Welcome back</h2>
     <p class="signup-text text-center">
       Don't have an account?
-      <a href="#">Sign up for free</a>
+      <a href="#" routerLink="/signup">Sign up for free</a>
     </p>
 
     <form id="loginForm" novalidate #loginForm="ngForm" (ngSubmit)="login(loginForm)">
@@ -83,5 +88,5 @@
 
     <p class="security-note">Protected by EditorialSaaS Security Cluster</p>
 
-</div>
-
+  </div>
+</body>

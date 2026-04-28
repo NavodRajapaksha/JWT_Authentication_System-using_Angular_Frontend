@@ -1,16 +1,60 @@
-<mat-drawer-container>
-  <mat-drawer [opened]="opened" mode="side">
-    <mat-list>
-      <mat-list-item routerLink="/cars" routerLinkActive="active">
-        <mat-icon color="bg-primary" mat-list-icon>directions_car</mat-icon>
-       <a href="">car</a>
+<!-- content.html -->
+<mat-drawer-container class="drawer-container">
+
+  <mat-drawer [opened]="opened" mode="side" class="sidebar">
+
+    <!-- Main Nav -->
+    <mat-nav-list class="sidebar-nav">
+
+      <mat-list-item routerLink="/admin" routerLinkActive="active-link" class="nav-item">
+        <mat-icon matListItemIcon>dashboard</mat-icon>
+        <span matListItemTitle>Dashboard</span>
       </mat-list-item>
-    </mat-list>
+
+      <mat-list-item routerLink="/user" routerLinkActive="active-link" class="nav-item">
+        <mat-icon matListItemIcon>group</mat-icon>
+        <span matListItemTitle>Users</span>
+      </mat-list-item>
+
+      <mat-list-item routerLink="/audit" routerLinkActive="active-link" class="nav-item">
+        <mat-icon matListItemIcon>assignment</mat-icon>
+        <span matListItemTitle>Audit Logs</span>
+      </mat-list-item>
+
+      <mat-list-item routerLink="/security" routerLinkActive="active-link" class="nav-item">
+        <mat-icon matListItemIcon>shield</mat-icon>
+        <span matListItemTitle>Security</span>
+      </mat-list-item>
+
+      <mat-list-item routerLink="/settings" routerLinkActive="active-link" class="nav-item">
+        <mat-icon matListItemIcon>settings</mat-icon>
+        <span matListItemTitle>Settings</span>
+      </mat-list-item>
+
+    </mat-nav-list>
+
+    <!-- Bottom Nav -->
+    <mat-nav-list class="sidebar-nav sidebar-bottom">
+
+      <mat-list-item routerLink="/support" routerLinkActive="active-link" class="nav-item">
+        <mat-icon matListItemIcon>help_outline</mat-icon>
+        <span matListItemTitle>Support</span>
+      </mat-list-item>
+
+      <mat-list-item routerLink="/docs" routerLinkActive="active-link" class="nav-item">
+        <mat-icon matListItemIcon>menu_book</mat-icon>
+        <span matListItemTitle>Documentation</span>
+      </mat-list-item>
+
+    </mat-nav-list>
+
   </mat-drawer>
 
-  <mat-drawer-content>
-    <div class="content">
+  <!-- Main Content -->
+  <mat-drawer-content class="main-content">
+    <div class="content-inner">
       <router-outlet></router-outlet>
     </div>
   </mat-drawer-content>
+
 </mat-drawer-container>
