@@ -1,0 +1,253 @@
+/* dashboard.component.css */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+:host {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.dashboard-wrapper {
+  min-height: 100vh;
+  background: #f5f5f7;
+  padding: 2.5rem 2rem 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ── Greeting ── */
+.greeting-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.35rem;
+  color: #1a1a2e;
+  margin-bottom: 0.25rem;
+  font-weight: 400;
+}
+
+.greeting-sub {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0;
+}
+
+/* ── Stat Cards ── */
+.stat-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.35rem 1.4rem;
+  border: 1px solid #ebebf0;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s;
+}
+
+.stat-card:hover {
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+.stat-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #999;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.stat-value {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #4361ee;
+  margin-bottom: 0.3rem;
+  line-height: 1.1;
+}
+
+.stat-unit {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #888;
+}
+
+.stat-role-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+}
+
+.stat-location {
+  font-size: 0.8rem;
+  color: #888;
+  margin: 0 0 0.3rem;
+}
+
+.stat-badge {
+  font-size: 0.75rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.stat-badge.growth { color: #28a745; }
+.stat-badge.secure { color: #4361ee; }
+
+.stat-icon {
+  font-size: 1.5rem;
+  color: #d0d0e0;
+  margin-top: 2px;
+}
+
+/* Tier badge */
+.tier-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1.5px solid #1a1a2e;
+  color: #1a1a2e;
+  text-transform: uppercase;
+}
+
+/* ── Activity Card ── */
+.activity-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid #ebebf0;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+}
+
+.activity-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin: 0;
+}
+
+.audit-link {
+  font-size: 0.82rem;
+  color: #4361ee;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.audit-link:hover { text-decoration: underline; }
+
+/* Table */
+.activity-table {
+  margin-bottom: 0;
+}
+
+.activity-table thead th {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #aaa;
+  border-bottom: 1.5px solid #f0f0f5;
+  padding: 0.6rem 0.75rem;
+}
+
+.activity-table tbody td {
+  padding: 0.9rem 0.75rem;
+  border-bottom: 1px solid #f5f5f8;
+  vertical-align: middle;
+}
+
+.activity-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.activity-table tbody tr:hover {
+  background: #fafafe;
+}
+
+/* Activity icon */
+.activity-icon-wrap {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.icon-blue   { background: #eef0fd; color: #4361ee; }
+.icon-gray   { background: #f2f2f5; color: #888; }
+.icon-orange { background: #fff4e8; color: #e07b20; }
+.icon-red    { background: #fdeef0; color: #e05c5c; }
+
+.activity-action-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1a1a2e;
+  margin: 0 0 2px;
+}
+
+.activity-sub {
+  font-size: 0.76rem;
+  color: #aaa;
+  margin: 0;
+  font-style: italic;
+}
+
+.activity-time {
+  font-size: 0.82rem;
+  color: #888;
+  white-space: nowrap;
+}
+
+/* Status badges */
+.status-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.badge-success  { background: #eef8f1; color: #28a745; border: 1px solid #c3e6cb; }
+.badge-pending  { background: #f5f5f5; color: #888;    border: 1px solid #ddd; }
+.badge-resolved { background: #fdeef0; color: #e05c5c; border: 1px solid #f5c6cb; }
+.badge-failed   { background: #fff3cd; color: #856404; border: 1px solid #ffc107; }
+
+/* Show more */
+.btn-show-more {
+  background: none;
+  border: none;
+  font-size: 0.82rem;
+  color: #666;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  padding: 0.4rem 1rem;
+  transition: color 0.2s;
+}
+
+.btn-show-more:hover { color: #4361ee; }
+
+/* ── Footer ── */
+.dashboard-footer {
+  text-align: center;
+  padding: 1.5rem 0 1rem;
+}
+
+.footer-tagline {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 0.25rem;
+}
+
+.footer-copy {
+  font-size: 0.67rem;
+  letter-spacing: 0.8px;
+  color: #ccc;
+  text-transform: uppercase;
+  margin: 0;
+}

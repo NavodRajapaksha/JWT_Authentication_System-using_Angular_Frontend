@@ -1,1 +1,121 @@
-<p>user works!</p>
+<!-- dashboard.component.html -->
+<div class="dashboard-wrapper">
+
+  <!-- Greeting -->
+  <div class="greeting-section mb-4">
+    <h1 class="greeting-title">Good morning, Navod.</h1>
+    <p class="greeting-sub">Here is a refined view of your platform activity and system status for today.</p>
+  </div>
+
+  <!-- Stats Cards -->
+  <div class="row g-3 mb-4">
+
+    <!-- Days Active -->
+    <div class="col-md-4">
+      <div class="stat-card h-100">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <p class="stat-label">DAYS ACTIVE</p>
+            <p class="stat-value">20<span class="stat-unit">days</span></p>
+            <p class="stat-badge growth">
+              <i class="bi bi-graph-up-arrow me-1"></i>Continuous growth streak
+            </p>
+          </div>
+          <div class="stat-icon">
+            <i class="bi bi-calendar3"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Account Role -->
+    <div class="col-md-4">
+      <div class="stat-card h-100">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <p class="stat-label">ACCOUNT ROLE</p>
+            <p class="stat-role-title">User</p>
+            <span class="tier-badge">Basic</span>
+          </div>
+          <div class="stat-icon">
+            <i class="bi bi-award"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Last Login -->
+    <div class="col-md-4">
+      <div class="stat-card h-100">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <p class="stat-label">LAST LOGIN</p>
+            <p class="stat-role-title">21.36</p>
+            <p class="stat-location">New York, USA</p>
+            <p class="stat-badge secure">
+              <i class="bi bi-shield-fill-check me-1"></i>Secure session active
+            </p>
+          </div>
+          <div class="stat-icon">
+            <i class="bi bi-clock-history"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Recent Activity Table -->
+  <div class="activity-card mb-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2 class="activity-title">Recent Activity</h2>
+      <a href="#" class="audit-link">View Full Audit Trail</a>
+    </div>
+
+    <table class="table activity-table">
+      <thead>
+        <tr>
+          <th>ACTION</th>
+          <th>TIME</th>
+          <th>STATUS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="d-flex align-items-start gap-3">
+              <div class="activity-icon-wrap">
+                <i class="bi bi-pencil-square"></i>
+              </div>
+              <div>
+                <p class="activity-action-title">Article Publish</p>
+                <p class="activity-sub">The art of systematic publishing</p>
+              </div>
+            </div>
+          </td>
+          <td class="activity-time">21.01</td>
+          <td>
+            <span class="status-badge ">
+              Success <i class="bi bi-check-circle ms-1"></i>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="text-center mt-2">
+      <button class="btn-show-more" >
+        Show more activity <i class="bi bi-chevron-down ms-1"></i>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="dashboard-footer">
+    <p class="footer-tagline">The Art of Precision Publishing</p>
+    <p class="footer-copy">© 2024 EDITORIALSAAS INFRASTRUCTURE. ALL RIGHTS RESERVED.</p>
+  </footer>
+
+</div>
