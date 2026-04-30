@@ -5,6 +5,7 @@ import { Menu } from '../../services/menu';
 import { MatListModule } from '@angular/material/list';
 import { RouterLink, RouterOutlet, RouterLinkActive } from "@angular/router";
 import { MatIcon, MatIconModule } from '@angular/material/icon';
+import { BehaviorSubject } from 'rxjs';
 
 
 @Component({
@@ -29,4 +30,6 @@ export class Content {
       this.opened = data;
     })
   }
+
+
 }

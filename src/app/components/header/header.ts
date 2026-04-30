@@ -41,7 +41,7 @@ export class Header {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: any) => {
-      this.isHomePage = event.url === '/home' || event.url === '/login' || event.url === '/signup';
+      this.isHomePage = event.url === '/home' || event.url === '/login' || event.url === '/si';
     });
   }
 

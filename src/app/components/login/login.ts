@@ -5,6 +5,7 @@ import { User } from '../../services/user';
 import { UserAuth } from '../../services/user-auth';
 import { Router, RouterLink } from '@angular/router';
 import { NgClass } from '@angular/common';
+import { Menu } from '../../services/menu';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +22,8 @@ export class Login implements OnInit {
   constructor(
     private userService: User,
     private UserAuth:UserAuth,
-    private router: Router 
+    private router: Router,
+    private menu: Menu
   ) { }
 
   ngOnInit(): void {
@@ -34,6 +36,7 @@ export class Login implements OnInit {
 
         this.UserAuth.setRoles(response.userEntity.roleEntitySet);
         this.UserAuth.setToken(response.jwtToken);
+        
 
         const role =  response.userEntity.roleEntitySet[0].roleName;
         if(role === 'Admin') {

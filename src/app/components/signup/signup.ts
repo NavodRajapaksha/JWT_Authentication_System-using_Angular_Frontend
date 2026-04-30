@@ -10,7 +10,7 @@ import { NgClass, NgIf } from "@angular/common";
 
 @Component({
   selector: 'app-signup',
-  imports: [FormsModule, NgClass, NgIf, RouterLink],
+  imports: [FormsModule, NgIf, RouterLink],
   templateUrl: './signup.html',
   styleUrl: './signup.css',
 })

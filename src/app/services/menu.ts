@@ -13,4 +13,6 @@ export class Menu {
     this.opened = !this.opened;
     this.isOpen.next(this.opened);
   }
+
+  
 }
