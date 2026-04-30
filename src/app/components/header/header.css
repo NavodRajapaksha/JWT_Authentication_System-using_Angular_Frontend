@@ -8,6 +8,7 @@
 /* ── Header Bar ── */
 .app-header {
   height: 60px;
+  position: relative;
   background: #ffffff;
   border-bottom: 1px solid #e5e7eb;
   font-family: 'DM Sans', sans-serif;

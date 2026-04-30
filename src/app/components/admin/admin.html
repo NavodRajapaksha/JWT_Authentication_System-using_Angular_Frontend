@@ -1,1 +1,109 @@
-<p>admin works!</p>
+<!-- admin.html -->
+<div class="admin-wrapper">
+
+  <!-- Page Header -->
+  <div class="page-header d-flex align-items-start justify-content-between">
+    <div>
+      <h1 class="page-title">Overview</h1>
+      <p class="page-sub">System-wide performance and user metrics for the last 24 hours.</p>
+    </div>
+    <button class="btn btn-export">Export CSV</button>
+  </div>
+
+  <!-- Stat Cards -->
+  <div class="stats-row row g-3 mb-4">
+
+    <div class="col-md-4">
+      <div class="stat-card">
+        <div class="d-flex justify-content-between align-items-start">
+          <span class="stat-label">TOTAL USERS</span>
+          <span class="stat-icon blue">👥</span>
+        </div>
+        <div class="stat-value blue">12,482</div>
+        <div class="stat-sub green">+4.2% <span class="text-muted">from last month</span></div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="stat-card">
+        <div class="d-flex justify-content-between align-items-start">
+          <span class="stat-label">ACTIVE SESSIONS</span>
+          <span class="stat-icon green">⚡</span>
+        </div>
+        <div class="stat-value green">1,105</div>
+        <div class="stat-sub green">Healthy <span class="text-muted">99.8% uptime</span></div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="stat-card">
+        <div class="d-flex justify-content-between align-items-start">
+          <span class="stat-label">BLOCKED ATTEMPTS</span>
+          <span class="stat-icon red">🛡️</span>
+        </div>
+        <div class="stat-value red">84</div>
+        <div class="stat-sub red">-12% <span class="text-muted">vs yesterday</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- User Directory Table -->
+  <div class="table-card">
+
+    <div class="table-header d-flex align-items-center justify-content-between">
+      <h2 class="table-title">User Directory</h2>
+      <div class="table-actions d-flex gap-3">
+        <span class="table-action-icon">⚙</span>
+        <span class="table-action-icon">🔍</span>
+      </div>
+    </div>
+
+    <table class="user-table w-100">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Status</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>
+            <div class="user-cell">
+              <img [src]="user.avatar" class="user-avatar" [alt]="user.name">
+              <span class="user-name">{{ user.name }}</span>
+            </div>
+          </td>
+          <td class="user-email">{{ user.email }}</td>
+          <td>
+            <span class="role-badge" [ngClass]="'role-' + user.role.toLowerCase()">
+              {{ user.role }}
+            </span>
+          </td>
+          <td>
+            <span class="status-badge" [ngClass]="'status-' + user.status.toLowerCase()">
+              <span class="status-dot"></span>
+              {{ user.status }}
+            </span>
+          </td>
+          <td class="text-end">
+            <span class="more-btn">···</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="table-footer d-flex align-items-center justify-content-between">
+      <span class="showing-text">Showing 4 of 12,482 users</span>
+      <div class="pagination d-flex gap-2">
+        <button class="pg-btn">‹</button>
+        <button class="pg-btn">›</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>

@@ -6,8 +6,9 @@ import { Menu } from '../../services/menu';
 import { RouterLink } from "@angular/router";
 import { UserAuth } from '../../services/user-auth';
 import { NgIf } from '@angular/common';
-import { Router } from '@angular/router';
 import { User } from '../../services/user';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 
 @Component({
@@ -17,12 +18,15 @@ import { User } from '../../services/user';
     MatButtonModule,
     MatIconModule,
     RouterLink,
-    NgIf
+    NgIf,
 ],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
 export class Header {
+
+  isHomePage = false;
+
 
   constructor(
     private menu: Menu,
@@ -30,6 +34,15 @@ export class Header {
     private router: Router,
     public user: User
   ) {
+  
+  }
+
+  ngOnInit(): void {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event: any) => {
+      this.isHomePage = event.url === '/home' || event.url === '/login' || event.url === '/signup';
+    });
   }
 
   toggleMenu() {

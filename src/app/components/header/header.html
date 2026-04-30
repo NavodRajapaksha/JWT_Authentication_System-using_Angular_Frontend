@@ -5,14 +5,14 @@
 
   <!-- Brand -->
   <div class="d-flex align-items-center gap-2">
-    <mat-icon class="menu-icon" (click)="toggleMenu()">menu</mat-icon>
-    <span class="brand-name">EditorialSaaS</span>
+    <mat-icon class="menu-icon" (click)="toggleMenu()" *ngIf="!isHomePage">menu</mat-icon>
+    <span class="brand-name">AuthSys</span>
   </div>
 
   <!-- Center Nav -->
   <ul class="nav-links d-flex align-items-center gap-1 list-unstyled mb-0">
     <li>
-      <a class="nav-link-item" routerLink="/home" routerLinkActive="nav-active">Solutions</a>
+      <a class="nav-link-item" routerLink="/home" routerLinkActive="nav-active">Home</a>
     </li>
     <li>
       <a class="nav-link-item" routerLink="/pricing" routerLinkActive="nav-active">Pricing</a>
@@ -45,7 +45,7 @@
       routerLink="/signup">
       Sign Up
     </button>
-    
+
     <button
       *ngIf="isLoggedIn()"
       class="btn btn-logout"

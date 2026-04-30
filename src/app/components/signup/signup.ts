@@ -3,14 +3,14 @@ import { Signup } from '../../dto/signup';
 import { OnInit } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 import { User } from '../../services/user';
-import { Router } from '@angular/router'; 
+import { Router, RouterLink } from '@angular/router'; 
 import { ToastrService } from 'ngx-toastr';
 import { NgForm } from '@angular/forms';
 import { NgClass, NgIf } from "@angular/common";
 
 @Component({
   selector: 'app-signup',
-  imports: [FormsModule, NgClass, NgIf, ],
+  imports: [FormsModule, NgClass, NgIf, RouterLink],
   templateUrl: './signup.html',
   styleUrl: './signup.css',
 })

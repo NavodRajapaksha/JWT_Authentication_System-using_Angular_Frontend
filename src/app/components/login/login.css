@@ -5,6 +5,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 40px 0;
       background: linear-gradient(135deg, #eceef8 0%, #f5f4fb 40%, #e8eaf6 70%, #f0eef8 100%);
       font-family: 'DM Sans', sans-serif;
     }

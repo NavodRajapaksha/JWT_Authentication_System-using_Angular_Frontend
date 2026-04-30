@@ -1,0 +1,236 @@
+/* admin.css */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500&display=swap');
+
+:host { display: block; }
+
+.admin-wrapper {
+  padding: 36px 40px;
+  max-width: 100%;
+  font-family: 'DM Sans', sans-serif;
+  background: #f5f4f0;
+  min-height: 100%;
+}
+
+/* ── Page Header ── */
+.page-header { margin-bottom: 28px; }
+
+.page-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  font-weight: 400;
+  color: #0d0d0d;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.page-sub {
+  font-size: 13.5px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.btn-export {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 8px 18px;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: all .15s;
+  cursor: pointer;
+}
+.btn-export:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+/* ── Stat Cards ── */
+.stat-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 22px 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  transition: box-shadow .2s;
+}
+.stat-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+
+.stat-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+
+.stat-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.stat-value {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1.1;
+  margin: 10px 0 6px;
+}
+.stat-value.blue  { color: #2563eb; }
+.stat-value.green { color: #059669; }
+.stat-value.red   { color: #dc2626; }
+
+.stat-sub {
+  font-size: 12px;
+  font-weight: 500;
+}
+.stat-sub.green { color: #059669; }
+.stat-sub.red   { color: #dc2626; }
+.stat-sub .text-muted { color: #9ca3af; font-weight: 400; }
+
+/* ── Table Card ── */
+.table-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.table-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.table-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #0d0d0d;
+  letter-spacing: -0.3px;
+  margin: 0;
+}
+
+.table-action-icon {
+  font-size: 16px;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: color .15s;
+}
+.table-action-icon:hover { color: #374151; }
+
+/* ── Table ── */
+.user-table { border-collapse: collapse; }
+
+.user-table th {
+  padding: 10px 24px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  color: #9ca3af;
+  letter-spacing: 0.2px;
+  background: #fafafa;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.user-table td {
+  padding: 14px 24px;
+  font-size: 14px;
+  color: #374151;
+  border-bottom: 1px solid #f9fafb;
+  vertical-align: middle;
+}
+
+.user-table tr:last-child td { border-bottom: none; }
+
+.user-table tr:hover td { background: #fafafa; }
+
+/* User cell */
+.user-cell { display: flex; align-items: center; gap: 12px; }
+
+.user-avatar {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.user-name { font-weight: 500; color: #0d0d0d; font-size: 14px; }
+.user-email { color: #6b7280; font-size: 13.5px; }
+
+/* Role badges */
+.role-badge {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+}
+.role-admin  { background: #ede9fe; color: #6d28d9; }
+.role-editor { background: #fef3c7; color: #d97706; }
+.role-viewer { background: #e0f2fe; color: #0369a1; }
+.role-user   { background: #f0fdf4; color: #15803d; }
+
+/* Status badges */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.status-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.status-active  .status-dot { background: #10b981; }
+.status-active  { color: #065f46; }
+
+.status-offline .status-dot { background: #d1d5db; }
+.status-offline { color: #6b7280; }
+
+.status-blocked .status-dot { background: #ef4444; }
+.status-blocked { color: #dc2626; }
+
+/* More button */
+.more-btn {
+  color: #9ca3af;
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 1px;
+  transition: color .15s;
+}
+.more-btn:hover { color: #374151; }
+
+/* ── Table Footer ── */
+.table-footer {
+  padding: 14px 24px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.showing-text {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.pg-btn {
+  width: 30px; height: 30px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: #fff;
+  color: #374151;
+  font-size: 14px;
+  cursor: pointer;
+  display: grid; place-items: center;
+  transition: all .15s;
+  padding: 0;
+}
+.pg-btn:hover { background: #f3f4f6; border-color: #d1d5db; }

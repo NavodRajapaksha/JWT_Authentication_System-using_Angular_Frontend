@@ -1,4 +1,206 @@
-.btn-disable {
-  background-color: #cccccc;
+/* signup.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+:host { display: block; }
+
+/* ── Page ── */
+.signup-page {
+  min-height: calc(100vh - 60px);
+  background: #f0eeea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── Heading ── */
+.signup-heading {
+  margin-bottom: 24px;
+}
+
+.signup-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: #0d0d0d;
+  letter-spacing: -0.5px;
+  margin-bottom: 6px;
+}
+
+.signup-sub-row {
+  gap: 16px;
+}
+
+.signup-sub {
+  font-size: 14px;
+  font-style: italic;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.signin-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4f46e5;
+  text-decoration: none;
+  transition: color .15s;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.signin-link:hover { color: #3730a3; }
+
+/* ── Card ── */
+.signup-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 36px 32px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+
+/* ── Fields ── */
+.field-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.field-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #0d0d0d;
+  background: #fafafa;
+  outline: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+
+.field-input::placeholder { color: #c4c9d4; }
+
+.field-input:focus {
+  border-color: #4f46e5;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(79,70,229,0.1);
+}
+
+.field-error {
+  font-size: 12px;
+  color: #ef4444;
+  margin-top: 4px;
+}
+
+/* ── Terms ── */
+.terms-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.terms-check {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  accent-color: #4f46e5;
+  cursor: pointer;
+}
+
+.terms-label {
+  font-size: 13.5px;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.terms-link {
+  color: #4f46e5;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.terms-link:hover { color: #3730a3; }
+
+/* ── Create Account Button ── */
+.btn-create {
+  background: #0d0d0d;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 13px 24px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  cursor: pointer;
+  transition: background .18s, transform .18s, box-shadow .18s;
+}
+
+.btn-create:hover:not(:disabled) {
+  background: #1f1f1f;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.btn-create:disabled {
+  background: #d1d5db;
   cursor: not-allowed;
+}
+
+/* ── Divider ── */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.divider-text {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #9ca3af;
+  white-space: nowrap;
+}
+
+/* ── Social Buttons ── */
+.btn-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+  padding: 10px 16px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: background .15s, border-color .15s, transform .15s;
+}
+
+.btn-social:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+  transform: translateY(-1px);
+}
+
+/* ── Bottom note ── */
+.bottom-note {
+  margin-top: 20px;
+  font-size: 12.5px;
+  color: #9ca3af;
 }
